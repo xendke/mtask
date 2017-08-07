@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+}
+/*.AppSlider {
+  padding-left: 200px;
+  padding-right: 200px;
+}*/
+.TaskListContainer {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.TaskList {
+  text-align: left;
+}
+.TaskItem {
+  width: inherit;
+}
+.TextField {
+  margin-left: 20px;
+  margin-right: 30px;
+}

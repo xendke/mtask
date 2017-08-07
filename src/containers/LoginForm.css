@@ -1,0 +1,10 @@
+.LoginForm {
+  line-height: 40vh;
+  height: 40vh;
+}
+
+.LoginForm #lForm {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
