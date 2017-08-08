@@ -23,7 +23,10 @@ class Register extends Component {
         this.user = user;
         this.setState({logged: true});
       } else {
-        this.user = null;
+        this.user = null
+        this.setState({
+          logged: false
+        });
       }
     });
   }
@@ -60,6 +63,13 @@ class Register extends Component {
         <TopBar
           title="// TODO: mTask"
           logged={this.state.logged}
+          onLoginClick={() => {this.props.history.push("/login")}}
+          onLogoutClick={() => {
+            firebase.auth().signOut()
+            .then(() => {
+              this.setState({logged: false});
+            })}
+          }
         />
         <form>
         <Paper zDepth={1} style={{width: 500, margin: "auto", marginTop: 100, paddingBottom: 20}}>

@@ -5,6 +5,7 @@ import './App.css';
 
 import {TaskerContainer} from 'containers';
 import TopBar from 'components/TopBar.jsx';
+import Welcome from 'components/Welcome.jsx'
 
 
 class App extends Component {
@@ -49,7 +50,7 @@ class App extends Component {
           onLoginClick={this.handleLoginClick}
         />
         <br/>
-        {this.state.logged ? <TaskerContainer user={this.state.user}/> : <p> not logged in</p>}
+        {this.state.logged ? <TaskerContainer user={this.state.user}/> : <Welcome/>}
       </div>
     );
   }
