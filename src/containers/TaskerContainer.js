@@ -25,6 +25,7 @@ class Tasker extends Component {
   }
 
   handleAddTask = (ev) => {
+    ev.preventDefault();
     var title = this.TextField.input.value;
 
     if(this.taskExists(title)) {
@@ -108,8 +109,10 @@ class Tasker extends Component {
   render() {
     return (
       <div>
+      <form onSubmit={this.handleAddTask}>
         <TextField id="TextField" className="TextField" ref={instance => this.TextField = instance}/>
         <RaisedButton label="Add" onTouchTap={this.handleAddTask}/>
+      </form>
         <AlertDialog text={this.state._alert_text} ref={instance => this.AlertDialog = instance}/>
         <br/>
         <br/>
