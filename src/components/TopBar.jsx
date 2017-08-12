@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
+import {Link} from 'react-router-dom';
 
 import { IconButton, IconMenu, MenuItem, FlatButton } from 'material-ui';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+import TodoIcon from 'material-ui/svg-icons/editor/format-list-bulleted';
+
+const MainButton = (props) => (
+  <IconButton>
+    <Link to='/'><TodoIcon color='white'/></Link>
+  </IconButton>
+);
+MainButton.muiName = "IconButton";
 
 const LoggedMenu = (props) => (
   <IconMenu
@@ -35,7 +44,7 @@ class TopBar extends Component {
     return (
       <AppBar
         title={this.props.title}
-        iconElementLeft={null}
+        iconElementLeft={<MainButton/>}
         iconElementRight={
           this.props.logged ?
           <LoggedMenu onLogoutClick={this.props.onLogoutClick}/>

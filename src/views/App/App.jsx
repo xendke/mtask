@@ -42,15 +42,17 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div>
         <TopBar
-          title="// TODO: mTask"
+          title="mTask"
           logged={this.state.logged}
           onLogoutClick={this.handleLogoutClick}
           onLoginClick={this.handleLoginClick}
         />
+      <div className="App">
         <br/>
         {this.state.logged ? <TaskerContainer user={this.state.user}/> : <Welcome/>}
+      </div>
       </div>
     );
   }

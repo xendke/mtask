@@ -46,11 +46,12 @@ class Login extends Component {
   }
   render() {
     return (
+      <div>
+      <TopBar
+        title="mTask"
+        logged={false}
+      />
       <div className="App">
-        <TopBar
-          title="// TODO: mTask"
-          logged={false}
-        />
         <LoginForm
           onLogin={this.handleLogin}
           emailError={this.state.emailError}
@@ -59,6 +60,7 @@ class Login extends Component {
         { this.state.showError ? <p style={{color: "red"}}> Wrong email or password! </p> : null }
 
         { this.state.logged ? <Redirect to="/"/> : null }
+      </div>
       </div>
     );
   }

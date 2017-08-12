@@ -59,9 +59,9 @@ class Register extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div>
         <TopBar
-          title="// TODO: mTask"
+          title="    mTask"
           logged={this.state.logged}
           onLoginClick={() => {this.props.history.push("/login")}}
           onLogoutClick={() => {
@@ -71,6 +71,7 @@ class Register extends Component {
             })}
           }
         />
+      <div className="App">
         <form>
         <Paper zDepth={1} style={{width: 500, margin: "auto", marginTop: 100, paddingBottom: 20}}>
           <TextField
@@ -106,6 +107,7 @@ class Register extends Component {
           <RaisedButton label="Register" primary={true} onClick={this.handleRegister}/> <br/>
         </Paper>
         </form>
+      </div>
       </div>
     );
   }
