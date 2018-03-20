@@ -20,7 +20,7 @@ firebase.initializeApp(config);
 
 ReactDOM.render(
   (<MuiThemeProvider muiTheme={muiTheme}>
-    <BrowserRouter>
+    <BrowserRouter basename={'/mtask'}>
       <Main/>
     </BrowserRouter>
   </MuiThemeProvider>),

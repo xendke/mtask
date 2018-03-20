@@ -2,7 +2,7 @@
   "name": "mtask",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mtask-be7ea.firebaseapp.com/",
+  "homepage": "https://www.xendke.io/mtask",
   "dependencies": {
     "firebase": "^4.1.3",
     "material-ui": "^0.18.5",
