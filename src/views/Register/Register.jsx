@@ -17,7 +17,6 @@ class Register extends Component {
     pw2: ""
   }
   componentDidMount() { // redirect to app if logged
-    console.log("helo");
     this.unsubscribeAuth = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.user = user;
